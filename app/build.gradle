@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     signingConfigs {
@@ -21,8 +21,8 @@ android {
     }
     buildTypes {
         release {
-        //  minifyEnabled false
-        //  minifyEnabled true
+            //  minifyEnabled false
+            //  minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         //debug {
@@ -43,7 +43,7 @@ android {
 
         targetSdk 33
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
-        buildConfigField "String", "BRANCH", "\"" + getGitRevParseInfo() + "\""
+        buildConfigField "String", "BRANCH", "\"" + "debug" + "\""
         signingConfig signingConfigs.release
     }
     namespace 'lu.fisch.canze'
@@ -57,11 +57,11 @@ android {
     }
 }
 
-static def getGitRevParseInfo() {
-    def cmd = "git rev-parse --abbrev-ref HEAD"
-    def proc = cmd.execute()
-    proc.text.trim()
-}
+//static def getGitRevParseInfo() {
+//    def cmd = "git rev-parse --abbrev-ref HEAD"
+//    def proc = cmd.execute()
+//    proc.text.trim()
+//}
 
 dependencies {
     // BoM for the Firebase platform
