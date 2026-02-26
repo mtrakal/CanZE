@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyFractions,TypographyEllipsis">
+
+    <!-- App -->
+
+    <string name="app_name">CanZE</string>
+
+    <!-- Menus -->
+
+    <string name="action_settings">Nastavení</string>
+    <string name="menu_Bluetooth" translatable="false">Bluetooth</string>
+
+    <!-- Generic -->
+
+    <string name="default_Zero" translatable="false">0</string>
+    <string name="default_Dash" translatable="false">-</string>
+    <string name="default_Slash" translatable="false">/</string>
+    <string name="default_DoubleSpace" translatable="false">\u0020\u0020</string>
+    <string name="default_Yes">Ano</string>
+    <string name="default_No">Ne</string>
+    <string name="default_Ok">OK</string>
+    <string name="default_NotOk">Není OK</string>
+    <string name="default_Cancel">Zrušit</string>
+    <string name="default_Reset">Obnovit</string>
+
+    <!-- Formats -->
+
+    <string name="format_NoView" formatted="false">Žádné zobrazení s id \'%s%s\'</string>
+    <string name="format_YMDHMSs" translatable="false">yyyyMMddHHmmssSSS</string> <!-- for logging and debugging -->
+    <string name="format_YMDHM" translatable="false">yyyy-MM-dd HH:mm:ss</string> <!-- for fairly readable displaying (settings, speedcontrol -->
+    <string name="format_YMDHMS" translatable="false">yyyy-MM-dd-HH-mm-ss</string> <!-- for log file filename -->
+
+    <!-- Units -->
+
+    <string name="unit_Nm">Nm</string>
+    <string name="unit_Km" translatable="false">\u0020km</string>
+    <string name="unit_Mi" translatable="false">\u0020mi</string>
+    <string name="unit_SpeedKm">\u0020km/h</string>
+    <string name="unit_SpeedMi">\u0020mi/h</string>
+    <string name="unit_ConsumptionKm">\u0020kWh/100km</string>
+    <string name="unit_ConsumptionMiAlt">\u0020mi/kWh</string>
+    <string name="unit_Celsius" translatable="false">°C</string>
+
+    <!-- Debug (generic) -->
+
+    <string name="label_debug">Debug\u0020</string>
+    <string name="default_debug">#Debug</string>
+
+    <!-- *************************** SELECTION SCREENS (MAIN AND FRAGMENTS) *************************** -->
+
+    <!-- Mainactivity -->
+
+    <string name="toast_InitWidgets">Inicializace widgetů</string>
+    <string name="toast_BluetoothLost">Spojení Bluetooth ztraceno!</string>
+    <string name="prompt_Disclaimer" translatable="false">Formální Prohlášení</string>
+    <string name="prompt_Accept">Ano, rozumím!</string>
+    <string name="prompt_Decline">Ne, nerozuměl jsem nic…</string>
+    <string name="prompt_DisclaimerText" translatable="false"><![CDATA[<html>CanZE ("software") je poskytnuta v současné podobě. Software používáte na vlastní
+                            riziko. Autoři neposkytují žádné záruky týkající se výkonu nebo vhodnosti pro konkrétní účel,
+                            ani žádné další záruky, ať již vyjádřené nebo předpokládané. Žádná ústní ani písemná sdělení
+                            nebo informace poskytnuté autory nevytvoří záruku. Za žádných okolností nebudou autoři
+                            odpovědni za přímé, nepřímé, zvláštní, náhodilé nebo následné škody vyplývající z použití,
+                            zneužití nebo neschopnosti použít software, ani pokud byl autor upozorněn na možnost takových
+                            škod. Tato vyloučení a omezení se nemusí vztahovat na všechny jurisdikce. Můžete mít další práva
+                            a některá z těchto omezení se na vás nemusí vztahovat. Tento software je určen pouze pro vědecké
+                            použití.
+                            <br>
+                            <br>
+                            <b>Používáním tohoto software zasahujete do své auta a to pomocí hardware a software mimo vaši
+                            kontrolu, vytvořeného volným týmem zájemců v tomto oboru. Každé auto je potenciálně smrtící
+                            vozidlo a mohli byste zranit nebo zabít sebe nebo ostatní jeho používáním, nebo dokonce
+                            věnováním pozornosti displejem namísto sledování silnice.</b></html></string>]]></string>
+    <string name="toast_Reconnecting">Opakované připojení Bluetooth…</string>
+    <!-- <string name="toast_WaitingSettings">Stopping Bluetooth. Settings are being loaded. Please wait ....</string> -->
+    <string name="toast_NotWhileDriving">Není možné během jízdy…</string>
+    <string name="toast_AdjustSettings">Nejdříve si prosím upravte nastavení</string>
+
+    <!-- Main (fragment) -->
+
+    <string name="menu_Main">Hlavní</string>
+    <string name="help_Main">Použijte gesta posunu prstem pro přepínání mezi Hlavní, Technickou a Experimentální obrazovkou.</string>
+
+    <!-- Technical (fragment) -->
+
+    <string name="menu_Technical">Technické</string>
+
+    <!-- Experimental (fragment) -->
+
+    <string name="menu_Experimental">Experimentální</string>
+    <string name="help_Experimental">Tato tlačítka jsou pouze pro testovací účely</string>
+
+    <!-- *************************** ACTIVITIES *************************** -->
+
+    <!-- All data -->
+
+    <string name="title_activity_alldata">Všechna data</string>
+    <string name="button_alldata">Všechna data</string>
+
+    <!-- Auxiliary battery -->
+
+    <string name="title_activity_auxbatt">Baterie 12 voltů</string>
+    <string name="button_AuxBatt">Baterie 12V</string>
+    <string name="label_auxbat">Napětí, Stav vozidla, Stav nabíjení</string>
+    <string name="label_auxbatvolt">Napětí</string>
+    <string name="label_AuxStatus">Doporučení výměny</string>
+    <string name="graph_VoltageState">Napětí, Stav vozidla</string>
+    <string name="label_vehiclestate">Stav vozidla</string>
+    <string-array name="list_VehicleState">
+        <item>Vypnuto, vypnuto (0:červená)</item>
+        <item>Zapnuto, vypnuto (1:zelená)</item>
+        <item>Zapalování zapnuto (2:modrá)</item>
+        <item>Spouštění (3:žlutá)</item>
+        <item>Zapnuto, zapnuto (4:azurová)</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="list_VehicleStatePh2">
+        <item>Vypnuto, vypnuto (0:červená)</item>
+        <item>Zapnuto, vypnuto (1:zelená)</item>
+        <item>Režim spánku čeká (2:modrá)</item>
+        <item>AutoACC (3:žlutá)</item>
+        <item>4</item>
+        <item>Zapalování zapnuto</item>
+        <item>Spouštění probíhá</item>
+        <item>Motor aktivní</item>
+        <item>Automatické spuštění</item>
+        <item>Zastavení motoru</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+    <string name="label_VoltageLoad">Napětí pod zátěží</string>
+    <string name="label_CurrentLoad">Proud pod zátěží</string>
+    <string-array name="list_ChargingStatus2">
+        <item>Bez nabíjení (0:červená)</item>
+        <item>Čekání (plánované, 1:zelená)</item>
+        <item>Ukončeno (2:modrá)</item>
+        <item>Probíhá (3:žlutá)</item>
+        <item>Selhání (4:azurová)</item>
+        <item>Čekání (5:fialová)</item>
+        <item>Přístupová linka otevřena (6:černá)</item>
+        <item>Nedostupné (7:šedá)</item>
+    </string-array>
+    <string-array name="list_AuxStatus">
+        <item>Nic</item>
+        <item>1</item>
+        <item>2</item>
+        <item>Brzy</item>
+        <item>4</item>
+        <item>Nyní</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <!-- Battery -->
+
+    <string name="title_activity_battery">Baterie</string>
+    <string name="button_Battery">Baterie</string>
+    <string name="graph_SOH">Stav zdraví (%)</string>
+    <string name="graph_RealIndicatedSoc">SOC skutečný / uživatel (%)</string>
+    <string name="help_QA"><![CDATA[Podrobnější informace o těchto datech naleznete v <a href=\'http://canze.fisch.lu/qa/\'>sekci Otázky a odpovědi</a> na <a href=\'http://canze.fisch.lu/\'>domovské stránce CanZE</a>.]]></string>
+    <string name="graph_CellVoltages">Napětí článků (V)</string>
+    <string name="graph_ModuleTemperatures">Teploty modulů baterie (°C)</string>
+
+    <!-- BCB (now integrated in ChargingTech) -->
+
+    <string name="header_GridParameters">Parametry sítě</string>
+    <string name="label_MainsCurrentType">Typ síťového proudu</string>
+    <string-array name="list_MainsCurrentType">
+        <item>Chyba</item>
+        <item>AC jednokazná</item>
+        <item>AC tříkazná</item>
+        <item>DC</item>
+        <item>AC dvoukazná</item>
+    </string-array>
+    <string name="label_phaseCurrent">Proud fáze RMS 1/2/3 (A)</string>
+    <string name="label_PhaseVoltage">Napětí fáze 1/2/3 (V)</string>
+    <string name="label_InterPhaseVoltage">Napětí mezi fázemi 12/23/31 (V)</string>
+    <string name="label_MainsActivePowerConsumed">Spotřebovaný výkon sítě (W)</string>
+    <string name="label_GroundResistanceOhm">Odpor uzemňovacího vodiče (Ω)</string>
+    <string name="label_CompletionStatus">Stav dokončení</string>
+    <string-array name="list_CompletionStatus">
+        <item>Inicializace</item>
+        <item>HF10</item>
+        <item>-</item>
+        <item>Zem sítě</item>
+        <item>-</item>
+        <item>Proud do země</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Uzemňovací vodič</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik DC</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik LF</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik DC+LF</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik HF</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik DC+HF</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik LF+HF</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>Únik DC+LF+HF</item>
+    </string-array>
+    <string name="label_SupervisorState">Stav nadřízeného</string>
+    <string-array name="list_SupervisorState">
+        <item>Inicializace</item>
+        <item>Čekání</item>
+        <item>Zavírání S2</item>
+        <item>Inicializace typu</item>
+        <item>Inicializace Lkg</item>
+        <item>Inicializace nabíjení</item>
+        <item>Nabíjení</item>
+        <item>Režim nulového proudu</item>
+        <item>Konec nabíjení</item>
+        <item>Otevírání S2</item>
+        <item>Připraveno ke spánku</item>
+        <item>Nouzové zastavení</item>
+        <item>Inicializace nabíjení DF</item>
+        <item>Zastavení OCP</item>
+        <item>Čekání S2</item>
+    </string-array>
+    <string-array name="list_SupervisorStatePh2">
+        <item>Inicializace</item>
+        <item>StandByNapájení</item>
+        <item>Zavírání S2</item>
+        <item>Inicializace typu</item>
+        <item>Inicializace lkg</item>
+        <item>StandByNapájeníNastavení</item>
+        <item>Nabíjení</item>
+        <item>Režim nulového proudu</item>
+        <item>Konec nabíjení</item>
+        <item>OtevíráníRL</item>
+        <item>STestOK</item>
+        <item>-</item>
+        <item>STestČekání</item>
+        <item>STestAkce</item>
+        <item>ČekáníRLCHA</item>
+        <item>ČekáníRLKontaktorTriple</item>
+        <item>OtevíráníCapaMC</item>
+        <item>-</item>
+    </string-array>
+
+    <!-- Braking -->
+
+    <string name="title_activity_braking">Informace o brzdění</string>
+    <string name="button_Braking">Brzdění</string>
+    <string name="label_driver_torque_request">Požadovaný kroutící moment</string>
+    <string name="label_ElecBrakeWheelsTorqueApplied">Aplikovaný elektrický kroutící moment (regenerace)</string>
+    <string name="label_diff_friction_torque">Aplikovaný třecí kroutící moment (ztráty)</string>
+    <string name="default_ZeroNm">0 Nm</string>
+    <string name="help_AllTorques">Všechny kroutící momenty jsou uvedeny jako kombinované kroutící momenty kol, ne kroutící momenty motoru.</string>
+
+    <!-- CanZE -->
+
+    <string name="message_CantConnect">Nelze se připojit. Bluetooth ještě není nakonfigurován?</string>
+
+    <!-- Charging and ChargingTech -->
+
+    <string name="title_activity_charging">Nabíjení</string>
+    <string name="button_Charging">Nabíjení</string>
+    <string name="button_ChargingTech">Technické nabíjení</string>
+    <string name="header_Charging">Parametry nabíječe</string>
+    <string name="header_Battery">Parametry baterie</string>
+    <string name="header_DrivingCh">Jízda</string>
+    <string name="header_CompTemp">Teploty modulů baterie a vyvažování</string>
+    <string name="label_max_charge">Max nabíjení/regenerace kW</string>
+    <string name="label_max_pilot">Proud pilotního nabíjení A</string>
+    <string name="label_Phases">Fáze</string>
+    <string name="label_UserSOC">Použitelný stav nabití (%)</string>
+    <string name="label_RealSOC">Skutečný stav nabití (%)</string>
+    <string name="label_HvTemp">Střední teplota baterie (°C)</string>
+    <string name="label_SOH">Stav zdraví (%)</string>
+    <string name="label_TTF">Čas do plného nabití (min)</string>
+    <string name="label_ETF">Energie do plného nabití (kWh)</string>
+    <string name="label_DISTA">Dostupný dosah</string>
+    <string name="label_Volt">Napětí HV baterie (V)</string>
+    <string name="label_Amps">Proud HV baterie (A)</string>
+    <string name="label_DcPwr">Výkon DC (kW)</string>
+    <string name="label_AvChPwr">Dostupný výkon nabíjení (kW)</string>
+    <string name="label_AvEner">Dostupná energie (kWh)</string>
+    <string name="label_12V">Napětí 12 voltů (V)</string>
+    <string name="label_12A">Proud 12 voltů (A)</string>
+    <string name="label_DcLoad">Zatížení DC-DC (%)</string>
+    <string name="label_HKM">Tachometr baterie</string>
+    <string name="label_ChaStatus">Stav nabíjení</string>
+    <string name="label_Plug">Stav zásuvky</string>
+    <string-array name="list_ChargingStatus">
+        <item>Bez nabíjení</item>
+        <item>Čekání (plánované)</item>
+        <item>Ukončeno</item>
+        <item>Probíhá</item>
+        <item>Selhání</item>
+        <item>Čekání</item>
+        <item>Přístupová linka otevřena</item>
+        <item>Nedostupné</item>
+    </string-array>
+    <string-array name="list_PlugStatus">
+        <item>Nepřipojeno</item>
+        <item>Připojeno</item>
+    </string-array>
+    <string name="header_EVSEParameters">Parametry CCS</string>
+    <string name="EVSEStatus">Stav nabíječe</string>
+    <string-array name="list_EVSEStatus">
+        <item>OK</item>
+        <item>Nabíječ není připraven</item>
+        <item>Vypnutí nabíječe</item>
+        <item>Přerušení utility nabíječe</item>
+        <item>Aktivní monitorování izolace nabíječe</item>
+        <item>Nouzové vypnutí nabíječe</item>
+        <item>Porucha nabíječe</item>
+        <item>Rezerva 8-C</item>
+        <item>Renegotiace</item>
+    </string-array>
+    <string name="EVSEFailureStatus">Stav selhání</string>
+    <string-array name="list_EVSEFailureStatus">
+        <item>OK</item>
+        <item>OK_Certifikát brzy vyprší</item>
+        <item>SELHÁNÍ_Certifikát vypršel</item>
+        <item>SELHÁNÍ_Smlouva zrušena</item>
+        <item>SELHÁNÍ_Certifikát odvolán</item>
+        <item>SELHÁNÍ_Certifikát není povolen na tomto nabíječi</item>
+        <item>SELHÁNÍ_Není dostupný žádný certifikát</item>
+        <item>SELHÁNÍ_Špatný režim přenosu energie</item>
+        <item>SELHÁNÍ_Špatný parametr nabíjení</item>
+        <item>SELHÁNÍ_Profil nabíjení není platný</item>
+        <item>SELHÁNÍ_ID služby není platné</item>
+        <item>SELHÁNÍ_Neznámá relace</item>
+        <item>SELHÁNÍ_Výběr služby není platný</item>
+        <item>SELHÁNÍ_Výběr sazby není platný</item>
+        <item>SELHÁNÍ_Výběr platby není platný</item>
+        <item>SELHÁNÍ_Chyba řetězce certifikátu</item>
+        <item>SELHÁNÍ_Výzva není platná</item>
+        <item>SELHÁNÍ_Podpis měření není platný</item>
+        <item>SELHÁNÍ_Žádná vybraná služba nabíjení</item>
+        <item>SELHÁNÍ_Chyba pořadí</item>
+        <item>SELHÁNÍ_Chyba podpisu</item>
+        <item>SELHÁNÍ_Certifikát není dostupný</item>
+        <item>SELHÁNÍ_Dodávka energie není aplikována</item>
+        <item>SELHÁNÍ</item>
+        <item>SELHÁNÍ_Chyba kontaktoru</item>
+    </string-array>
+    <string name="EVReady">Vozidlo připraveno</string>
+    <string-array name="list_EVReady">
+        <item>Vozidlo není připraveno k nabíjení</item>
+        <item>Vozidlo je připraveno k nabíjení</item>
+    </string-array>
+    <string name="CPLCComStatus">Stav komunikace</string>
+    <string-array name="list_CPLCComStatus">
+        <item>Není navázána HLC komunikace</item>
+        <item>HLC komunikace se inicializuje</item>
+        <item>HLC komunikace je připravena - zabezpečený režim</item>
+        <item>HLC komunikace je zastavena</item>
+        <item>Chyba HLC komunikace</item>
+        <item>HLC komunikace je připravena - nezabezpečený režim</item>
+        <item>Nepoužito</item>
+        <item>Nedostupná hodnota [počáteční hodnota]</item>
+        <item>HLC komunikace není připravena - selhání nastavení TLS</item>
+        <item>HLC komunikace není připravena - časový limit TLS</item>
+        <item>HLC komunikace není připravena - TLS není podporován</item>
+        <item>HLC komunikace není připravena - časový limit SDP</item>
+        <item>HLC komunikace není připravena - verze ISO-2 není podporována</item>
+        <item>HLC komunikace není připravena - časový limit nastavení V2G</item>
+        <item>HLC komunikace není připravena - selhání V2G</item>
+    </string-array>
+    <string name="EVRequestState">Stav požadavku vozidla</string>
+    <string-array name="list_EVRequestState">
+        <item>Žádný HLC požadavek</item>
+        <item>Požadavek na komunikaci a nastavení služby</item>
+        <item>Požadavek na objevení parametrů nabíjení</item>
+        <item>Požadavek na kontrolu kabelu</item>
+        <item>Požadavek na předběžné nabití</item>
+        <item>Požadavek na dodávku energie</item>
+        <item>Požadavek na požadavek proudu</item>
+        <item>Požadavek na příjemku měření</item>
+        <item>Požadavek na detekci svařování</item>
+        <item>Požadavek na zastavení relace</item>
+        <item>Přirovnání resetování</item>
+        <item>Požadavek na stav nabíjení</item>
+        <item>AC BPT</item>
+        <item>DC BPT</item>
+    </string-array>
+    <string name="EVSEState">Stav nabíječe</string>
+    <string-array name="list_EVSEState">
+        <item>Není navázána HLC komunikace</item>
+        <item>Komunikace a nastavení služby je navázáno</item>
+        <item>Odpověď na objevení parametrů nabíjení</item>
+        <item>Odpověď na kontrolu kabelu</item>
+        <item>Odpověď na předběžné nabití</item>
+        <item>Odpověď na dodávku energie</item>
+        <item>Odpověď na požadavek proudu</item>
+        <item>Odpověď na příjemku měření</item>
+        <item>Odpověď na detekci svařování</item>
+        <item>Odpověď na zastavení relace s nabíječem (nabíjení na stanici)</item>
+        <item>Odpověď na stav nabíjení</item>
+    </string-array>
+    <string name="EVSEMaxPower">Max výkon DC nabíjení (W)</string>
+    <string name="EVSEPowerLimitReached">Dosažen limit výkonu DC nabíjení</string>
+    <string name="EVSEMaxVoltage">Max napětí DC nabíjení (V)</string>
+    <string name="EVSEPresentVoltage">Současné napětí DC nabíjení (V)</string>
+    <string name="EVSEVoltageLimitReached">Dosažen limit napětí DC nabíjení</string>
+    <string name="EVSEMaxCurrent">Max proud DC nabíjení (A)</string>
+    <string name="EVSEPresentCurrent">Současný proud DC nabíjení (A)</string>
+    <string name="EVSECurrentLimitReached">Dosažen limit proudu DC nabíjení</string>
+    <string-array name="list_EVSELimitReached">
+        <item>Ne</item>
+        <item>Ano</item>
+    </string-array>
+
+    <!-- Charging graph -->
+
+    <string name="title_activity_charging_graph">Grafy nabíjení</string>
+    <string name="button_ChargingGraphs">Grafy nabíjení</string>
+    <string name="graph_PilotPower">Proud pilotního nabíjení (A), Výkon nabíjení (kW)</string>
+    <string name="graph_MaxRealChPwr">Max nabíjení baterie (kW) / Výkon DC nabíjení (kW)</string>
+    <string name="graph_EnergyTemperature">Dostupná energie (kWh), Teplota (°C)</string>
+
+    <!-- Charging history -->
+
+    <string name="title_activity_charging_history">Historie nabíjení</string>
+    <string name="button_chargingHistory">Historie nabíjení</string>
+    <string name="header_ChargingHistory">Posledních 10 relací</string>
+    <string name="label_distance">Tachometr</string>
+    <string name="label_EndOfChargeStatus">Konec</string>
+    <string name="label_TypeOfCharge">Typ</string>
+    <string name="label_EndSoc">SOC</string>
+    <string name="label_EndBatteryTemp">Teplota</string>
+    <string name="label_HistDuration">Doba trvání</string>
+    <string-array name="list_ChargingHistEnd">
+        <item>Plné</item>
+        <item>Odpojeno</item>
+        <item>Přerušeno</item>
+        <item>Selhání</item>
+        <item>Plánováno</item>
+        <item>Chyba 1</item>
+        <item>Chyba 22</item>
+        <item>Chyba 3</item>
+        <item>Chyba 4</item>
+        <item>Chyba 5</item>
+        <item>Chyba 6</item>
+    </string-array>
+    <string-array name="list_ChargingHistTyp">
+        <item>Pomalé</item>
+        <item>Rychlé</item>
+        <item>Kapka</item>
+        <item>Neznámé</item>
+        <item>Plánované</item>
+    </string-array>
+    <string name="header_ChargeSummary">Souhrnné informace o nabíjení</string>
+    <string name="label_TotKwh">Celková spotřeba baterie (kWh)</string>
+    <string name="label_TotKwhRegen">Celková energie z regeneračního brzdění (kWh)</string>
+    <string name="label_CountFull">Plné nabití (#)</string>
+    <string name="label_CountPartial">Částečné nabití (#)</string>
+
+    <!-- Clima tech -->
+
+    <string name="title_activity_clima_tech">Klima</string>
+    <string name="button_Climate">Klima</string>
+    <string name="label_ThermalComfortPower">Spotřeba energie termálního komfortu (W)</string>
+    <string name="label_ClimaLoopMode">Režim klimatické smyčky</string>
+    <string name="label_HVBatConditioningMode">Režim kondicionování HV baterie</string>
+    <string name="label_Temperatures">Teploty (°C)</string>
+    <string name="label_HVEvaporationTemp">Teplota vypařování HV (°C)</string>
+    <string name="label_ACPressure">Tlak (bar)</string>
+    <string name="label_HVCoolingState">Stav chladicího systému HV</string>
+    <string name="label_EngineFanSpeed">Otáčky ventilátoru motoru (%)</string>
+    <string name="label_ClimateBatteryInteraction">Interakce klima-baterie</string>
+    <string-array name="list_CoolingStatus">
+        <item>Ne</item>
+        <item>Chlazení samotné</item>
+        <item>Chlazení spojené</item>
+        <item>Nedostupné</item>
+    </string-array>
+    <string-array name="list_ConditioningStatus">
+        <item>Req. Foukání</item>
+        <item>Req. chlazení</item>
+        <item>Req. oteplování</item>
+        <item>Kondice není req.</item>
+    </string-array>
+    <string-array name="list_ConditioningStatusPh2">
+        <item>Bez požadavku</item>
+        <item>Chlazení kabiny spojené vzduchem</item>
+        <item>Chlazení baterie spojené vzduchem</item>
+        <item>Chlazení baterie samotné vzduchem</item>
+        <item>Chlazení kabiny spojené</item>
+    </string-array>
+    <string-array name="list_ClimateStatus">
+        <item>Nedostupné</item>
+        <item>Klimatizace</item>
+        <item>Klimatizace - odmrazování</item>
+        <item> </item>
+        <item>Tepelné čerpadlo</item>
+        <item> </item>
+        <item>Odmrazování</item>
+        <item>Klid</item>
+    </string-array>
+    <string-array name="list_ClimateStatusPh2">
+        <item>Nedostupné</item>
+        <item>Klimatizace</item>
+        <item>Klimatizace - odmrazování</item>
+        <item>Klimatizace na tepelné čerpadlo</item>
+        <item>Tepelné čerpadlo</item>
+        <item>Tepelné čerpadlo na klimatizaci</item>
+        <item>-</item>
+        <item>Režim klidu</item>
+    </string-array>
+    <string name="label_IH_ClimCompPWRStatus">Otáčky kompresoru, ECO</string>
+    <string name="graph_Climatech">Vnější (°C), Vnitřní (°C), Nastavení (°C), Baterie (°C)</string>
+    <string name="label_PtcRelay1">PTC relé 1</string>
+    <string name="label_PtcRelay2">PTC relé 2</string>
+    <string name="label_PtcRelay3">PTC relé 3</string>
+    <string-array name="list_PtcRelay">
+        <item>Zapnuto</item>
+        <item>Vypnuto</item>
+    </string-array>
+
+    <!-- Consumption -->
+
+    <string name="title_activity_consumption">Spotřeba</string>
+    <string name="button_Consumption">Spotřeba</string>
+    <string name="label_WheelTorque">Kroutící moment kola</string>
+    <string name="label_InstantConsumption">Okamžitá spotřeba</string>
+    <string name="label_kWh100km">kWh/100km</string>
+    <string name="graph_PowerSoc">Výkon (kW), SOC (%)</string>
+    <string name="graph_SpeedConsumption">Rychlost (km/h), Spotřeba (kWh/100km)</string>
+    <string name="graph_PowerDelta">Výkon (kWh), Delta s realitou (km)</string>
+    <string name="graph_RangeDelta">Dosah (km), Delta s realitou (km)</string>
+    <string name="graph_DeltaRange">Delta s realitou (km), Dosah (km)</string>
+
+    <!-- Dash -->
+
+    <string name="title_activity_dash">Palubní deska</string>
+    <string name="button_Dash">Palubní deska</string>
+
+    <!-- Datalogger -->
+
+    <string name="format_NoSid" formatted="false">%s: sid %s neexistuje</string>
+
+    <!-- Driving -->
+
+    <string name="title_activity_driving">Informace o jízdě</string>
+    <string name="button_Driving">Jízda</string>
+    <string name="label_pedal">Poloha pedálu</string>
+    <string name="label_wheel_torque">Kroutící moment kola</string>
+    <string name="label_DistToDest">Vzdálenost k cíli</string>
+    <string name="label_DistAvailAtDest">Dostupná vzdálenost v cíli</string>
+    <string name="label_TripConsumption">Spotřeba cesty</string>
+    <string name="label_TripDistance">Vzdálenost cesty</string>
+    <string name="label_TripEnergy">Energie cesty (kWh)</string>
+    <string name="button_Double">Dvojitý</string>
+    <string name="prompt_Distance">ZBÝVAJÍCÍ VZDÁLENOST</string>
+    <string name="prompt_SetDistance">Prosím, zadejte vzdálenost k vašemu cíli. Displej odhadne zbývající jízdní vzdálenost dostupnou v baterii v příjezdu</string>
+
+    <!-- DTC and All data -->
+
+    <string name="title_activity_dtc">Kódy diagnostické chyby</string>
+    <string name="button_DtcReadout">Čtení DTC</string>
+    <string name="button_QueryDTCs">Dotaz</string>
+    <string name="button_ClearDTCs">Vymazat</string>
+    <string name="button_AllData">Všechna data</string>
+    <string name="help_DTC">Chcete-li povolit vymazání DTC:\n\nVložte klíčenku\n\nZařaďte D\n\nDržte tlačítko spuštění přibližně 5 sekund, dokud se neobjeví zpráva "Vyjměte kartu"\n\nZařaďte P</string>
+    <string name="message_PollerStopping">\n\nProsím čekejte, dokud se vlákno pollerem zastavuje…\n</string>
+    <string name="message_NoConnection">\nŽádné připojení. Zavřete tuto obrazovku a ujistěte se, že je vaše zařízení spárováno a připojeno\n</string>
+    <string name="message_NoEcuDefinition">\nNelze najít definice pro tuto ECU. Zobrazí se pouze kódy DTC\n</string>
+    <string name="message_SendingInit">\nOdeslání iniciační sekvence\n</string>
+    <string name="message_InitFailed">\nInitializace selhala\n</string>
+    <string name="message_StartTestSession">\nOdeslání sekvence spuštění testovací relace</string>
+    <string name="message_NoTestSessionField">Pole spuštění relace neexistuje\n</string>
+    <string name="message_UnexpectedResult">Dotaz odeslán, ale obdržen neočekávaný výsledek:[</string>
+    <string name="message_GetDtcs">\nOdeslání sekvence spuštění DTC:[</string>
+    <string name="message_NoGetDtcsField">Pole Get DTCs neexistuje\n</string>
+    <string name="message_NoActiveDtcs">\nŽádné aktivní DTC\n</string>
+    <string name="message_clear">"Vymazat "</string>
+    <string name="message_NoClearDtcField">Pole Clear DTCs neexistuje\n</string>
+    <string name="message_MessageNull">Zpráva je null. Je auto vypnuto?\n</string>
+    <string name="message_ClearSuccessful">Vymazání zdá se být úspěšné, prosím dotaz DTCs\n</string>
+    <string name="message_DumpDone">Hotovo. Soubor protokolu vytvořen</string>
+    <string name="format_DumpWriting" formatted="false">Čekejte, zápis %s</string>
+
+    <!-- Elm testing -->
+
+    <string name="title_activity_elm_test">Test ELM327 Dongle</string>
+    <string name="button_ElmTesting">Testování ELM</string>
+    <string name="message_ExpectedResult">Obdržen očekávaný výsledek\n==========\n</string>
+    <string name="message_FieldNotExists">Požadované pole neexistuje. Jedná se o chybu v testovací sadě, prosím ohlaste\n</string>
+    <string name="message_Ready">\nPřipraveno</string>
+    <string name="message_ResultEmpty">Výsledek je prázdný. Váš dongle nebude fungovat\n</string>
+    <string name="message_Problem">Problém:</string>
+    <string name="message_PrepIsoTp">\nZpracování připravené ISO-TP příkazu CLUSTER SW\n</string>
+    <string name="message_PrepFree">\nZpracování připravené volné rámce PARK BRAKE\n</string>
+    <string name="message_NoFreeTesting">\nNetestování volných rámců, jak jste vybrali Použít pole ISOTP\n</string>
+    <string name="message_DevicePassed">\nVaše zařízení prošlo všemi testy, bude pravděpodobně fungovat právě správně\n</string>
+
+    <!-- ELM327 -->
+
+    <string name="message_HardResetFailed">Tvrdý reset selhal, restartování Bluetooth ...</string>
+    <string name="message_ELM13Ready">ELM připraven, verze 1.3, měl by fungovat</string>
+    <string name="message_ELM14Ready">ELM připraven, verze 1.4, měl by fungovat</string>
+    <string name="message_ELM8015Ready">ELM připraven, verze innocar, měl by fungovat</string>
+    <string name="message_ELMReady">ELM je nyní připraven</string>
+    <string name="message_ELM20Ready">ELM připraven, verze 2.x, pravděpodobně nebude fungovat, prosím ohlaste, pokud funguje</string>
+    <string name="message_ELMUnknown">ELM připraven, neznámá verze, pravděpodobně nebude fungovat, prosím ohlaste, pokud funguje</string>
+
+    <!-- Field test -->
+
+    <string name="title_activity_fieldtest" translatable="false">Testování pole</string>
+    <string name="button_FieldTest" translatable="false">Testování pole</string>
+
+    <!-- Firmware -->
+
+    <string name="title_activity_firmware">Firmware</string>
+    <string name="button_Firmware">Firmware</string>
+    <string name="help_Ecus"><![CDATA[Kliknutím na ECU získáte podrobnosti. Další informace o počítačích auta najdete <a href="http://canze.fisch.lu/computers/">zde</a>.]]></string>
+    <string name="button_WriteCsv">Napsat vše do csv</string>
+
+    <!-- Frames -->
+
+    <string name="format_NoAsset" formatted="false">Nelze přistoupit k aktivu %s</string>
+
+    <!-- Heatmap battery modules -->
+
+    <string name="title_activity_heatmap_bat">Tepelná mapa teploty</string>
+    <string name="button_HeatmapTemperature">Tepelná mapa teploty</string>
+
+    <!-- Heatmap voltages -->
+
+    <string name="title_activity_heatmap_cellvoltage">Tepelná mapa napětí</string>
+    <string name="button_HeatmapVoltage">Tepelná mapa napětí</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_9" translatable="false">9</string>
+    <string name="_17" translatable="false">17</string>
+    <string name="_25" translatable="false">25</string>
+    <string name="_33" translatable="false">33</string>
+    <string name="_41" translatable="false">41</string>
+    <string name="_49" translatable="false">49</string>
+    <string name="_57" translatable="false">57</string>
+    <string name="_65" translatable="false">65</string>
+    <string name="_73" translatable="false">73</string>
+    <string name="_81" translatable="false">81</string>
+    <string name="_89" translatable="false">89</string>
+    <string name="label_CellVoltageTop">Nejvyšší napětí článku (V)</string>
+    <string name="label_CellVoltageBottom">Nejnižší napětí článku (V)</string>
+    <string name="label_CellVoltageDelta">Rozdíl napětí článku (mV)</string>
+
+    <!-- LeakCurrents -->
+
+    <string name="title_activity_leakCurrents">Únikové proudy</string>
+    <string name="button_LeakCurrents">Únikové proudy</string>
+    <string name="label_LeakCurrentDc">Únik DC (mA)</string>
+    <string name="label_LeakCurrentLf">Únik LF, 50 Hz (mA)</string>
+    <string name="label_LeakCurrentHf">Únik HF, 10 Khz (mA)</string>
+    <string name="label_LeakCurrentEhf">Únik EHF, 10 KHz harmoniky (mA)</string>
+
+    <!-- Prediction -->
+
+    <string name="title_activity_prediction">Predikce nabíjení</string>
+    <string name="button_ChargingPrediction">Predikce nabíjení</string>
+    <string name="label_StateAtThisMoment">Stav v tomto okamžiku</string>
+    <string name="label_BatteryTemperature">Teplota baterie</string>
+    <string name="label_ACPower">Výkon AC</string>
+    <string name="label_StateOfCharge">Stav nabití (%)</string>
+    <string name="label_ChargingPrediction">Predikce nabíjení</string>
+    <string name="label_Duration">Doba trvání (hh:mm)</string>
+    <string name="label_Soc">SOC</string>
+    <string name="label_Range">Dostupný dosah</string>
+    <string name="label_DcPower">Výkon DC nabíjení</string>
+
+    <!-- Range -->
+
+    <string name="title_activity_range">Dosah</string>
+    <string name="button_Range">Dosah</string>
+    <string name="label_RangeRemaining">Dostupný dosah autom:</string>
+    <string name="label_RangeRemainingCanZE">Dostupný dosah CanZE:</string>
+    <string name="label_EstimatedDrivingStyleLoss">Odhadovaná ztráta energie stylu jízdy:</string>
+    <string name="graph_DistanceEnergy">Dostupný dosah (km), Dostupná energie (kWh)</string>
+
+    <!-- Research -->
+
+    <string name="title_activity_research">Výzkum</string>
+    <string name="button_Research">Výzkum</string>
+
+    <!-- Settings -->
+
+    <string name="title_activity_settings">Nastavení</string>
+    <string name="build">Sestava:</string>
+    <string name="version">Verze:</string>
+    <string name="label_RemoteDevice">Vzdálené zařízení</string>
+    <string name="label_DeviceAddress">Adresa zařízení</string>
+    <string name="label_DeviceType">Typ zařízení</string>
+    <string name="label_Car">Auto</string>
+    <string name="label_LogLevel">Úroveň protokolu</string>
+    <string name="label_Options">Možnosti</string>
+    <string name="label_SafeDrivingMode">Bezpečný režim jízdy</string>
+    <string name="label_BluetoothBackgroundMode">Režim Bluetooth na pozadí</string>
+    <string name="label_Miles">Míle</string>
+    <string name="label_Darkmode">Tmavý režim</string>
+    <string name="label_AltFields">Použít pole ISOTP</string>
+    <string name="label_SdCardLogging">Protokolování SD karty</string>
+    <string name="label_Debug">Ladění</string>
+    <string name="label_Fields">Pole</string>
+    <string name="help_Fields">Protokoluje všechna pole požadovaná aktuální obrazovkou.</string>
+    <string name="label_LogToSdcard1">Protokolovat na sdcard1</string>
+    <string name="label_Actions">Akce</string>
+    <string name="label_ClearCachedData">Vymazat mezipaměť</string>
+    <string name="prompt_YesIKnow">Ano</string>
+    <string name="prompt_NoSecureWay">Ne</string>
+    <string name="prompt_Attention">POZORNOST</string>
+    <string name="prompt_WarningDriving">Jízda bez věnování plné pozornosti provozu je extrémně nebezpečná a bude ohrožovat vás a život lidí kolem vás. Vypnutí tohoto režimu se vůbec nedoporučuje!\n\nJste si jisti, že chcete pokračovat v zakázání režimu Bezpečná jízda?</string>
+    <string name="prompt_NoThanks">Ne, děkuji</string>
+    <string name="prompt_BluetoothOn">Ponechání Bluetooth aktivního, když aplikace přejde na pozadí, může kolidovat s ostatními aplikacemi používajícími funkci Bluetooth. Může také vybít vaši baterii, pokud zapomenete ukončit CanZE nebo tuto možnost vypnout.<br /><br /><b>Pokud tuto funkci používáte, spojení zůstane aktivní, i když restartujete zařízení Android.</b><br /><br />Jste si jisti, že chcete pokračovat v povolení režimu Bluetooth Background?</string>
+    <string name="prompt_NoSd">Externí SD karta není dostupná, není zapisovatelná nebo nemá dostatek volného místa na protokolování dat.<br /><br /><b>Export dat nelze povolit!</b></string>
+    <string name="prompt_Sorry">Omlouváme se…</string>
+    <string name="toast_CacheCleared">Mezipaměť byla vymazána…</string>
+    <!-- <string name="toast_PleaseUseTop">Please use one of the top buttons to quit the settings …</string> -->
+    <string name="toast_NoBluetooth">Toto zařízení nemá žádný adaptér Bluetooth.\n\nOmlouváme se…</string>
+
+    <string name="label_Settings_Device">Zařízení</string>
+    <string name="label_CarModel">Model</string>
+    <string name="label_DistanceUnit">Jednotka vzdálenosti</string>
+    <string name="label_Kilometers">Kilometry</string>
+    <string name="label_Security">Bezpečnost</string>
+    <string name="label_Display">Displej</string>
+    <string name="label_CanSeeSettings">Nastavení CanSee</string>
+    <string name="label_LogLevelSummary">Definuje úroveň zpráv ladění zobrazeného toastu</string>
+    <string name="label_LoggingSettings">Nastavení protokolování</string>
+    <string name="label_Logging">Protokolování</string>
+    <string name="label_ConfigureCustomFragment">Konfigurovat vlastní fragment</string>
+    <string name="label_StartupActivity">Aktivita spuštění</string>
+    <string name="label_Theme">Motiv</string>
+    <string name="label_ThemeFollowSystem">Následovat systém</string>
+    <string name="label_ThemeDark">Tmavý</string>
+    <string name="label_ThemeLight">Světlý</string>
+    <string name="label_ToastLevelNone">Nic</string>
+    <string name="label_ToastLevelElm">Zařízení</string>
+    <string name="label_ToastLevelElmCar">Vše</string>
+    <string name="label_Info">Info</string>
+
+    <!-- SettingsCustom -->
+
+    <string name="title_activity_settingscustom">Nastavení vlastního fragmentu</string>
+
+    <!-- Speed control -->
+
+    <string name="title_activity_speedcontrol">Průměrná rychlost</string>
+    <string name="button_speedcontrol">Prům. rychlost</string>
+    <string name="label_averageSpeed">Průměrná rychlost</string>
+    <string name="label_TapToStart">Klepnutím kdekoli spustit nebo resetovat</string>
+    <string name="message_gotfirst">Obdržena první hodnota…</string>
+    <string name="message_gotsecond">Obdržena druhá hodnota…</string>
+    <string name="message_waitsecond">Čekání na druhou hodnotu…</string>
+
+    <!-- Tires -->
+
+    <string name="title_activity_tires">Informace o pneumatikách</string>
+    <string name="button_Tires">Pneumatiky</string>
+    <string name="help_PressuresMbar">Všechny tlaky v mbar. Tlaky jsou přijímány pouze během jízdy.</string>
+    <string name="label_TireSpdPresMisadaption">Nesprávné přizpůsobení tlaku na rychlost</string>
+    <string name="label_TireFL">Přední levá</string>
+    <string name="label_TireFR">Přední pravá</string>
+    <string name="label_TireRL">Zadní levá</string>
+    <string name="label_TireRR">Zadní pravá</string>
+    <string name="label_TireIDFL">ID přední levá</string>
+    <string name="label_TireIDFR">ID přední pravá</string>
+    <string name="label_TireIDRL">ID zadní levá</string>
+    <string name="label_TireIDRR">ID zadní pravá</string>
+    <string name="button_Tires_write">napsat</string>
+    <string name="button_Tires_read">čtení</string>
+    <string name="button_TiresSaveToA">ULOŽIT DO A</string>
+    <string name="button_TiresLoadFromA">NAČÍST Z A</string>
+    <string name="button_TiresSaveToB">ULOŽIT DO B</string>
+    <string name="button_TiresLoadFromB">ULOŽIT Z B</string>
+    <string name="button_TiresSwapFrontRear">PROHODIT PŘEDNÍ ZADNÍ</string>
+    <string-array name="list_TireStatus">
+        <item>OK</item>
+        <item>Bez informací</item>
+        <item>Přetlak</item>
+        <item>-</item>
+        <item>Prasklá</item>
+        <item>Prasklá</item>
+        <item>Podtlak</item>
+        <item>-</item>
+    </string-array>
+
+
+    <!-- Widgets only -->
+
+    <string name="title_activity_widget">WidgetAktivita</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ahoj prázdný fragment</string>
+    <string name="menu_Custom">Vlastní</string>
+
+    <!-- ZE50 test -->
+    <string name="title_activity_ZE50Test">Test ZE50</string>
+
+</resources>
