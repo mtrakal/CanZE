@@ -656,6 +656,7 @@
     <string name="button_AllData">All data</string>
     <string name="help_DTC">To enable clearing DTC\'s:\n\nEnter key card\n\nGear to D\n\nHold start button for approximately 5 seconds until the \'Remove card\' message appears\n\nGear to P</string>
     <string name="message_PollerStopping">\n\nPlease wait while the poller thread is stopped…\n</string>
+    <string name="message_Connecting">\nConnecting to device…</string>
     <string name="message_NoConnection">\nNo connection. Close this screen and make sure your device paired and connected\n</string>
     <string name="message_NoEcuDefinition">\nCannot find definitions for this ECU. DTC codes display only\n</string>
     <string name="message_SendingInit">\nSending initialisation sequence\n</string>
@@ -888,5 +889,8 @@
 
     <!-- ZE50 test -->
     <string name="title_activity_ZE50Test">ZE50 test</string>
+
+    <string name="title_activity_usb_list">USB Devices</string>
+    <string name="devices_found">%d USB device(s) found</string>
 
 </resources>

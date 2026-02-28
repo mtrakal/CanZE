@@ -9,6 +9,7 @@ import lu.fisch.canze.actors.Field;
 import lu.fisch.canze.actors.Fields;
 import lu.fisch.canze.actors.Message;
 import lu.fisch.canze.bluetooth.BluetoothManager;
+import lu.fisch.canze.devices.USB;
 
 /*
     CanZE
@@ -51,7 +52,55 @@ public class ElmTestActivity extends CanzeActivity {
                     MainActivity.device.stopAndJoin();
                 }
 
-                if (!BluetoothManager.getInstance().isConnected()) {
+                // Ensure device is initialized
+                if (MainActivity.device == null) {
+                    appendResult("\nDevice is null, initializing...\n");
+                    // Try to reload settings to create device
+                    MainActivity.getInstance().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            MainActivity.getInstance().loadSettings();
+                        }
+                    });
+                    // Wait a bit for device to be created
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        // ignore
+                    }
+
+                    if (MainActivity.device == null) {
+                        appendResult(MainActivity.getStringSingle(R.string.message_NoConnection));
+                        appendResult("\nDevice could not be initialized. Please check settings.\n");
+                        return;
+                    }
+                }
+
+                // Check connection based on device type
+                boolean isConnected = false;
+                String deviceType = MainActivity.deviceType;
+
+                if (deviceType != null && deviceType.equals("USB")) {
+                    // For USB, check if device exists and try to connect
+                    if (MainActivity.device instanceof USB) {
+                        USB usbDevice = (USB) MainActivity.device;
+                        if (!usbDevice.isConnected()) {
+                            appendResult(MainActivity.getStringSingle(R.string.message_Connecting) + "\n");
+                            if (!usbDevice.connect()) {
+                                appendResult(MainActivity.getStringSingle(R.string.message_NoConnection));
+                                return;
+                            }
+                        }
+                        isConnected = true;
+                    } else {
+                        appendResult("\nUSB device type selected but device is not USB instance\n");
+                    }
+                } else {
+                    // For Bluetooth or other devices
+                    isConnected = BluetoothManager.getInstance().isConnected();
+                }
+
+                if (!isConnected) {
                     appendResult(MainActivity.getStringSingle(R.string.message_NoConnection));
                     return;
                 }

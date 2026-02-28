@@ -86,23 +86,48 @@ public abstract class CanzeActivity extends AppCompatActivity implements FieldLi
         if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        // reconnect bluetooth if needed
+        // reconnect device if needed (Bluetooth or USB)
         if (MainActivity.device != null) {
-            if (!BluetoothManager.getInstance().isConnected()) {
-                // restart Bluetooth
-                MainActivity.debug("CanzeActivity: restarting BT");
+            String deviceType = MainActivity.deviceType;
+            boolean isConnected = false;
+
+            // Check connection based on device type
+            if (deviceType != null && deviceType.equals("USB")) {
+                // For USB, check if USB device is connected
+                if (MainActivity.device instanceof lu.fisch.canze.devices.USB) {
+                    isConnected = ((lu.fisch.canze.devices.USB) MainActivity.device).isConnected();
+                }
+            } else {
+                // For Bluetooth or other devices
+                isConnected = BluetoothManager.getInstance().isConnected();
+            }
+
+            if (!isConnected) {
+                MainActivity.debug("CanzeActivity: restarting connection (" + (deviceType != null ? deviceType : "BT") + ")");
                 (new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try {
-                            BluetoothManager.getInstance().connect();
+                            String deviceType = MainActivity.deviceType;
+                            if (deviceType != null && deviceType.equals("USB")) {
+                                // For USB, connect directly
+                                if (MainActivity.device instanceof lu.fisch.canze.devices.USB) {
+                                    lu.fisch.canze.devices.USB usbDevice = (lu.fisch.canze.devices.USB) MainActivity.device;
+                                    if (!usbDevice.connect()) {
+                                        if (!isFinishing())
+                                            MainActivity.toast(MainActivity.TOAST_NONE, "Failed to connect to USB device");
+                                    }
+                                }
+                            } else {
+                                // For Bluetooth
+                                BluetoothManager.getInstance().connect();
+                            }
                         } catch (InvalidParameterException e) {
                             if (!isFinishing())
                                 MainActivity.toast(MainActivity.TOAST_NONE, R.string.message_CantConnect);
                         }
                     }
                 })).start();
-                //BluetoothManager.getInstance().connect();
             }
         }
         MainActivity.debug("CanzeActivity: onCreate (" + this.getClass().getSimpleName() + ")");

@@ -90,6 +90,7 @@ import lu.fisch.canze.devices.CanSee;
 import lu.fisch.canze.devices.Device;
 import lu.fisch.canze.devices.ELM327;
 import lu.fisch.canze.devices.Http;
+import lu.fisch.canze.devices.USB;
 import lu.fisch.canze.interfaces.BluetoothEvent;
 import lu.fisch.canze.interfaces.DebugListener;
 import lu.fisch.canze.interfaces.FieldListener;
@@ -184,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
     private static boolean isDriving = false;
     public static boolean milesMode = false;
     public static boolean altFieldsMode = false;
+    public static String deviceType = null; // Type of device: ELM327, USB, Http, CanSee
 
     public static final boolean storageIsAvailable = true;
     public static final short TOAST_NONE = 0;
@@ -338,7 +340,7 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         toast(TOAST_NONE, resource);
     }
 
-    private void loadSettings() {
+    public void loadSettings() {
         debug("MainActivity: loadSettings");
         try {
             this.settings = getSharedPreferences(PREFERENCES_FILE, 0);
@@ -351,7 +353,7 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
             bluetoothDeviceAddress = settings.getString(SettingsActivity.SETTING_DEVICE_ADDRESS, null);
             gatewayUrl = settings.getString(SettingsActivity.SETTING_DEVICE_HTTP_GATEWAY, null);
             // String dataFormat = settings.getString("dataFormat", "crdt");
-            String deviceType = settings.getString(SettingsActivity.SETTING_DEVICE_TYPE, "Arduino");
+            deviceType = settings.getString(SettingsActivity.SETTING_DEVICE_TYPE, "Arduino");
             safeDrivingMode = settings.getBoolean(SettingsActivity.SETTING_SECURITY_SAFE_MODE, true);
             bluetoothBackgroundMode = settings.getBoolean(SettingsActivity.SETTING_DEVICE_USE_BACKGROUND_MODE, false);
             milesMode = settings.getBoolean(SettingsActivity.SETTING_CAR_USE_MILES, false);
@@ -384,6 +386,9 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
                     break;
                 case "ELM327":
                     device = new ELM327();
+                    break;
+                case "USB":
+                    device = new USB();
                     break;
                 case "ELM327Http":
                 case "Http":
@@ -502,6 +507,31 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
                 showBluetoothState(BLUETOOTH_DISCONNECTED);
             }
         });
+
+        // Configure USB with the same event listener (despite the name, it works for USB too)
+        USB.setConnectionEventListener(new BluetoothEvent() {
+            @Override
+            public void onBeforeConnect() {
+                showBluetoothState(BLUETOOTH_SEARCH);
+            }
+
+            @Override
+            public void onAfterConnect(BluetoothSocket bluetoothSocket) {
+                if (device != null)
+                    device.init(visible);
+                showBluetoothState(BLUETOOTH_CONNECTED);
+            }
+
+            @Override
+            public void onBeforeDisconnect(BluetoothSocket bluetoothSocket) {
+            }
+
+            @Override
+            public void onAfterDisconnect() {
+                showBluetoothState(BLUETOOTH_DISCONNECTED);
+            }
+        });
+
         // detect hardware status
         int BT_STATE = BluetoothManager.getInstance().getHardwareState();
         if (BT_STATE == BluetoothManager.STATE_BLUETOOTH_NOT_AVAILABLE)
@@ -886,6 +916,19 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
             }
         }
 
+        // Handle USB devices differently
+        if (deviceType != null && deviceType.equals("USB")) {
+            debug("MainActivity.reloadBluetooth: USB device selected, initiating USB connection");
+
+            if (device instanceof USB) {
+                USB usbDevice = (USB) device;
+                if (!usbDevice.connect()) {
+                    toast("Failed to connect to USB device");
+                }
+            }
+            return;
+        }
+
         // try to get a new BT thread
         BluetoothManager.getInstance().connect(
                 bluetoothDeviceAddress,
@@ -929,6 +972,16 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
                 device.clearFields();
             }
         }
+
+        // Handle USB devices differently - disconnect USB
+        if (deviceType != null && deviceType.equals("USB")) {
+            debug("MainActivity.stopBluetooth: USB device selected, disconnecting USB");
+            if (device instanceof USB) {
+                ((USB) device).disconnect();
+            }
+            return;
+        }
+
         // disconnect BT
         debug("MainActivity.stopBluetooth > BT disconnect");
         BluetoothManager.getInstance().disconnect();
@@ -1037,9 +1090,43 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         imageView.setOnClickListener(v -> (new Thread(new Runnable() {
             @Override
             public void run() {
-                toast(getStringSingle(R.string.toast_Reconnecting));
-                stopBluetooth(false); // do NOT clear the activity queue
-                reloadBluetooth(false); // no need to reload settings
+                // Ensure device is initialized
+                if (device == null) {
+                    debug("MainActivity: Device is null, loading settings first");
+                    loadSettings();
+                }
+
+                // Check if USB is selected
+                if (deviceType != null && deviceType.equals("USB")) {
+                    if (device instanceof USB) {
+                        USB usbDevice = (USB) device;
+
+                        // Toggle connection: if connected, disconnect; if disconnected, connect
+                        if (usbDevice.isConnected()) {
+                            debug("MainActivity: USB is connected, disconnecting...");
+                            toast("Disconnecting USB device...");
+                            stopBluetooth(false); // This will call disconnect via event
+                        } else {
+                            debug("MainActivity: USB is disconnected, connecting...");
+                            toast("Connecting to USB device...");
+                            stopBluetooth(false); // Stop any previous state
+
+                            if (!usbDevice.connect()) {
+                                toast("Failed to connect to USB device");
+                            } else {
+                                device.initConnection();
+                                toast("USB device connected");
+                            }
+                        }
+                    } else {
+                        toast("USB device not initialized");
+                    }
+                } else {
+                    // Bluetooth - use original behavior (reconnect)
+                    toast(getStringSingle(R.string.toast_Reconnecting));
+                    stopBluetooth(false); // do NOT clear the activity queue
+                    reloadBluetooth(false); // no need to reload settings
+                }
             }
         })).start());
     }
@@ -1352,4 +1439,3 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         //return getExternalFilesDir(null).getAbsolutePath() + "/";
     }
 }
-

@@ -36,18 +36,6 @@ import android.text.Html;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
-import com.google.gson.Gson;
-
-import java.lang.reflect.Method;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,6 +46,16 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
+
+import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
 import lu.fisch.canze.BuildConfig;
 import lu.fisch.canze.R;
 import lu.fisch.canze.actors.Utils;
@@ -110,10 +108,12 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String DEVICE_TYPE_CAN_SEE = "CanSee";
     public static final String DEVICE_TYPE_ELM_HTTP = "ELM327Http";
     public static final String DEVICE_TYPE_BOB_DUE = "Bob Due";
+    public static final String DEVICE_TYPE_USB = "USB";
 
     // Bluetooth devices names used to compare settings values
     public static final String DEVICE_NAME_HTTP_GATEWAY = "http gateway";
     public static final String DEVICE_NAME_CAN_SEE = "cansee";
+    public static final String DEVICE_NAME_USB = "usb";
 
     // Car models
     public static final CharSequence[] CAR_MODELS_LABELS = {
@@ -207,6 +207,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == MainActivity.REQUEST_ENABLE_BT) {
+            // Refresh device list for Bluetooth
             settingsFragment.fillDeviceList();
         }
 
@@ -314,7 +315,7 @@ public class SettingsActivity extends AppCompatActivity {
                     removeSetting = true;
                     break;
                 case "optDark":
-                    editor.putInt(SETTING_DISPLAY_THEME, StrToIntDefault (oldValue, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
+                    editor.putInt(SETTING_DISPLAY_THEME, StrToIntDefault(oldValue, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
                     removeSetting = true;
                     break;
                 case "disclaimer":
@@ -322,7 +323,7 @@ public class SettingsActivity extends AppCompatActivity {
                     removeSetting = true;
                     break;
                 case "startMenu":
-                    editor.putInt(SETTING_DISPLAY_STARTUP_MENU, StrToIntDefault (oldValue, 0));
+                    editor.putInt(SETTING_DISPLAY_STARTUP_MENU, StrToIntDefault(oldValue, 0));
                     removeSetting = true;
                     break;
             }
@@ -342,8 +343,8 @@ public class SettingsActivity extends AppCompatActivity {
         MainActivity.debug("Settings after migration: " + settings.getAll().toString());
     }
 
-    private static int StrToIntDefault (String s, int defaultValue) {
-        try{
+    private static int StrToIntDefault(String s, int defaultValue) {
+        try {
             return Integer.parseInt(s);
         } catch (Exception e) {
             return defaultValue;
@@ -386,13 +387,14 @@ public class SettingsActivity extends AppCompatActivity {
             loadDisplaySettings();
             loadInfo();
         }
-/*
-        @Override
-        public void onDetach() {
-            super.onDetach();
-            // saveSettings();
-        }
-*/
+
+        /*
+                @Override
+                public void onDetach() {
+                    super.onDetach();
+                    // saveSettings();
+                }
+        */
         private void bindSettingsEvents() {
             // On BT device choice
             findPreference(SETTING_DEVICE_CHOICE).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -402,7 +404,7 @@ public class SettingsActivity extends AppCompatActivity {
                     String choiceValue = newValue.toString();
                     String choiceLabel = devicesList.getEntries()[devicesList.findIndexOfValue(choiceValue)].toString();
 
-                    applyDeviceSettings(choiceLabel, choiceValue);
+                    applyDeviceSettings(choiceLabel, choiceValue, true); // true = user selection
 
                     return true;
                 }
@@ -419,7 +421,7 @@ public class SettingsActivity extends AppCompatActivity {
             findPreference(SETTING_SECURITY_SAFE_MODE).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(final Preference preference) {
-                    if (!((SwitchPreference)preference).isChecked()) {
+                    if (!((SwitchPreference) preference).isChecked()) {
                         // set dialog message
                         String yes = MainActivity.getStringSingle(R.string.prompt_YesIKnow);
                         String no = MainActivity.getStringSingle(R.string.prompt_NoSecureWay);
@@ -481,7 +483,7 @@ public class SettingsActivity extends AppCompatActivity {
             findPreference(SETTING_DEVICE_USE_BACKGROUND_MODE).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(final Preference preference) {
-                    if (((SwitchPreference)preference).isChecked()) {
+                    if (((SwitchPreference) preference).isChecked()) {
                         // set dialog message
                         String yes = MainActivity.getStringSingle(R.string.prompt_YesIKnow);
                         String no = MainActivity.getStringSingle(R.string.prompt_NoThanks);
@@ -678,19 +680,25 @@ public class SettingsActivity extends AppCompatActivity {
             tryTofillDeviceList();
             String deviceAddressValue = settings.getString(SETTING_DEVICE_ADDRESS, "");
             String deviceNameValue = settings.getString(SETTING_DEVICE_NAME, "");
+            String deviceTypeValue = settings.getString(SETTING_DEVICE_TYPE, "");
+
             if (deviceNameValue.toLowerCase().startsWith(DEVICE_NAME_HTTP_GATEWAY)) {
                 devicesList.setValue(DEVICE_TYPE_HTTP_GATEWAY);
                 //deviceAddressValue = settings.getString(SETTING_DEVICE_HTTP_GATEWAY, "");
+            } else if (deviceTypeValue.equals(DEVICE_TYPE_USB) || deviceAddressValue.startsWith("USB:")) {
+                // USB device selected - set the value to the stored USB device identifier
+                devicesList.setValue(deviceAddressValue);
             } else if (deviceAddressValue.isEmpty()) {
                 devicesList.setValueIndex(0);
             } else {
                 devicesList.setValue(deviceAddressValue);
             }
 
-            // Propagate device settings to other fields
+            // Propagate device settings to other fields (false = not user selection, don't open USB list)
             applyDeviceSettings(
                     settings.getString(SETTING_DEVICE_NAME, ""),
-                    deviceAddressValue
+                    deviceAddressValue,
+                    false
             );
         }
 
@@ -854,6 +862,10 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void applyDeviceSettings(String choiceLabel, String choiceValue) {
+            applyDeviceSettings(choiceLabel, choiceValue, false);
+        }
+
+        private void applyDeviceSettings(String choiceLabel, String choiceValue, boolean isUserSelection) {
             EditTextPreference deviceAddress = (EditTextPreference) findPreference(SETTING_DEVICE_ADDRESS);
             ListPreference deviceType = (ListPreference) findPreference(SETTING_DEVICE_TYPE);
             SwitchPreference useIsotp = (SwitchPreference) findPreference(SETTING_DEVICE_USE_ISOTP_FIELDS);
@@ -867,6 +879,25 @@ public class SettingsActivity extends AppCompatActivity {
                 // Set device type and disable field
                 deviceType.setValue(DEVICE_TYPE_HTTP_GATEWAY);
                 deviceType.setEnabled(false);
+            } else if (choiceValue.startsWith("USB:")) {
+                // USB device selected
+                MainActivity.debug("USB device selected: " + choiceLabel + " (" + choiceValue + ")");
+
+                // Set UI fields
+                deviceAddress.setText(choiceLabel);
+                deviceAddress.setEnabled(false);
+                deviceType.setValue(DEVICE_TYPE_USB);
+                deviceType.setEnabled(false);
+                useIsotp.setChecked(true);
+
+                // Save device info to preferences
+                if (isUserSelection) {
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString(SETTING_DEVICE_NAME, choiceLabel);
+                    editor.putString(SETTING_DEVICE_ADDRESS, choiceValue);
+                    editor.putString(SETTING_DEVICE_TYPE, DEVICE_TYPE_USB);
+                    editor.apply();
+                }
             } else if (choiceLabel.toLowerCase().startsWith(DEVICE_NAME_CAN_SEE)) {
                 // Set device address
                 deviceAddress.setText(choiceValue);
@@ -963,6 +994,32 @@ public class SettingsActivity extends AppCompatActivity {
             listLabels.add("HTTP Gateway\n-");
             listValues.add(DEVICE_TYPE_HTTP_GATEWAY);
 
+            // Add all available USB devices
+            try {
+                android.hardware.usb.UsbManager usbManager = (android.hardware.usb.UsbManager)
+                        getActivity().getSystemService(Context.USB_SERVICE);
+                if (usbManager != null) {
+                    java.util.List<com.hoho.android.usbserial.driver.UsbSerialDriver> availableDrivers =
+                            com.hoho.android.usbserial.driver.UsbSerialProber.getDefaultProber().findAllDrivers(usbManager);
+
+                    for (com.hoho.android.usbserial.driver.UsbSerialDriver driver : availableDrivers) {
+                        for (com.hoho.android.usbserial.driver.UsbSerialPort port : driver.getPorts()) {
+                            android.hardware.usb.UsbDevice device = driver.getDevice();
+                            String usbDeviceName = String.format("USB: 0x%04x/0x%04x (Port %d)",
+                                    device.getVendorId(),
+                                    device.getProductId(),
+                                    port.getPortNumber());
+                            String usbDeviceValue = "USB:" + device.getDeviceId() + ":" + port.getPortNumber();
+
+                            listLabels.add(usbDeviceName + "\n" + driver.getClass().getSimpleName());
+                            listValues.add(usbDeviceValue);
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                MainActivity.debug("Failed to enumerate USB devices: " + e.getMessage());
+            }
+
             //if ("HTTP Gateway".equals(deviceName))
             //    selectedIndex = i;
 
@@ -1039,7 +1096,7 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.putString(SETTING_DEVICE_NAME, device);
                 if (device.toLowerCase().startsWith(DEVICE_NAME_HTTP_GATEWAY)) {
                     EditTextPreference url = findPreference(SETTING_DEVICE_ADDRESS);
-                    editor.putString(SETTING_DEVICE_HTTP_GATEWAY, url.getText().replace ("http:", "https:"));
+                    editor.putString(SETTING_DEVICE_HTTP_GATEWAY, url.getText().replace("http:", "https:"));
                 }
             }
 
@@ -1057,8 +1114,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void setSwitchPreferenceStatus(SwitchPreference preference, String setting,
-                                               boolean status)
-        {
+                                               boolean status) {
             SharedPreferences.Editor editor = settings.edit();
             preference.setChecked(status);
             editor.putBoolean(setting, status).apply();

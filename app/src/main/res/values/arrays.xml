@@ -4,11 +4,13 @@
         <item>ELM327</item>
         <item>CanSee</item>
         <item>Http</item>
+        <item>USB</item>
     </string-array>
     <string-array name="btDeviceType_values">
         <item>ELM327</item>
         <item>CanSee</item>
         <item>Http</item>
+        <item>USB</item>
     </string-array>
 
     <!-- Display contrast modes -->

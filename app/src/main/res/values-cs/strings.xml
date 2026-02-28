@@ -657,6 +657,7 @@
     <string name="button_AllData">Všechna data</string>
     <string name="help_DTC">Chcete-li povolit vymazání DTC:\n\nVložte klíčenku\n\nZařaďte D\n\nDržte tlačítko spuštění přibližně 5 sekund, dokud se neobjeví zpráva "Vyjměte kartu"\n\nZařaďte P</string>
     <string name="message_PollerStopping">\n\nProsím čekejte, dokud se vlákno pollerem zastavuje…\n</string>
+    <string name="message_Connecting">\nPřipojování k zařízení…</string>
     <string name="message_NoConnection">\nŽádné připojení. Zavřete tuto obrazovku a ujistěte se, že je vaše zařízení spárováno a připojeno\n</string>
     <string name="message_NoEcuDefinition">\nNelze najít definice pro tuto ECU. Zobrazí se pouze kódy DTC\n</string>
     <string name="message_SendingInit">\nOdeslání iniciační sekvence\n</string>
@@ -890,4 +891,6 @@
     <!-- ZE50 test -->
     <string name="title_activity_ZE50Test">Test ZE50</string>
 
+    <string name="title_activity_usb_list">USB Zařízení</string>
+    <string name="devices_found">Nalezeno %d USB zařízení</string>
 </resources>
