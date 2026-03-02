@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto screen strings -->
+    <string name="aa_connection_status_title">Stav připojení</string>
+    <string name="aa_connection_status_disconnected">Nepřipojeno k vozidlu</string>
+    <string name="aa_connection_instructions_title">Instrukce</string>
+    <string name="aa_connection_instructions_text">Otevřete aplikaci CanZE a připojte se k vozidlu</string>
+
+    <string name="aa_user_soc_title">Baterie (User SOC)</string>
+    <string name="aa_real_soc_title">Skutečný stav (Real SOC)</string>
+    <string name="aa_range_title">Zbývající dosah</string>
+    <string name="aa_speed_title">Rychlost</string>
+    <string name="aa_hv_temp_title">Teplota HV baterie</string>
+    <string name="aa_charging_power_title">Nabíjecí výkon</string>
+    <string name="aa_soh_title">Stav baterie (SOH)</string>
+</resources>

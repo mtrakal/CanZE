@@ -2,10 +2,6 @@
 <resources>
     
     
-    <!-- App -->
-    
-    <string name="app_name">CanZE</string>
-    
     <!-- Menus -->
 
     <string name="action_settings">Einstellungen</string>

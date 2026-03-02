@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto screen strings - Russian -->
+    <string name="aa_connection_status_title">Статус подключения</string>
+    <string name="aa_connection_status_disconnected">Не подключено к автомобилю</string>
+    <string name="aa_connection_instructions_title">Инструкции</string>
+    <string name="aa_connection_instructions_text">Откройте приложение CanZE и подключитесь к автомобилю</string>
+
+    <string name="aa_user_soc_title">Батарея (User SOC)</string>
+    <string name="aa_real_soc_title">Реальный заряд (Real SOC)</string>
+    <string name="aa_range_title">Оставшийся запас хода</string>
+    <string name="aa_speed_title">Скорость</string>
+    <string name="aa_hv_temp_title">Температура HV батареи</string>
+    <string name="aa_charging_power_title">Мощность зарядки</string>
+    <string name="aa_soh_title">Состояние батареи (SOH)</string>
+</resources>

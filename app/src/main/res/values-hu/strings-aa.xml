@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto screen strings - Hungarian -->
+    <string name="aa_connection_status_title">Kapcsolat állapota</string>
+    <string name="aa_connection_status_disconnected">Nincs csatlakozva a járműhöz</string>
+    <string name="aa_connection_instructions_title">Útmutató</string>
+    <string name="aa_connection_instructions_text">Nyissa meg a CanZE alkalmazást és csatlakozzon a járművéhez</string>
+
+    <string name="aa_user_soc_title">Akkumulátor (User SOC)</string>
+    <string name="aa_real_soc_title">Valós töltöttség (Real SOC)</string>
+    <string name="aa_range_title">Fennmaradó hatótávolság</string>
+    <string name="aa_speed_title">Sebesség</string>
+    <string name="aa_hv_temp_title">HV akkumulátor hőmérséklete</string>
+    <string name="aa_charging_power_title">Töltési teljesítmény</string>
+    <string name="aa_soh_title">Akkumulátor állapota (SOH)</string>
+</resources>

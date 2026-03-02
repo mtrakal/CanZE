@@ -74,6 +74,7 @@ import java.util.concurrent.ExecutionException;
 
 import lu.fisch.canze.BuildConfig;
 import lu.fisch.canze.R;
+import lu.fisch.canze.androidauto.AaDemoManager;
 import lu.fisch.canze.actors.Ecus;
 import lu.fisch.canze.actors.Field;
 import lu.fisch.canze.actors.Fields;
@@ -1044,6 +1045,9 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         //if (BuildConfig.BUILD_TYPE.equals("debug")) setForceCrash(menu);
         if (BuildConfig.DEBUG) setForceCrash(menu);
 
+        // Demo for Android auto, when we don't have real data from vehicle.
+        if (BuildConfig.DEBUG) setDemoAa(menu);
+
         // get a reference to the bluetooth action button
         setBluetoothMenuItem (menu); //bluetoothMenutItem = menu.findItem(R.id.action_bluetooth);
         // and put the right view on it
@@ -1076,6 +1080,12 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
     private void setForceCrash (Menu menu) {
         if (menu == null) return;
         MenuItem crasher = menu.findItem(R.id.action_crash);
+        crasher.setVisible(true);
+    }
+
+    private void setDemoAa (Menu menu) {
+        if (menu == null) return;
+        MenuItem crasher = menu.findItem(R.id.action_aa_demo);
         crasher.setVisible(true);
     }
 
@@ -1246,6 +1256,23 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         } else if (id == R.id.action_custom) {
             viewPager.setCurrentItem(3, true);
             updateActionBar();
+        } else if (id == R.id.action_aa_demo) {
+            // Demo is only available when no real device address is configured.
+            // fields is always non-null (singleton), so we check device + address only.
+            String addr = getBluetoothDeviceAddress();
+            boolean isConfigured = device != null && addr != null && !addr.isEmpty();
+            if (isConfigured) {
+                Toast.makeText(this, R.string.aa_demo_unavailable, Toast.LENGTH_SHORT).show();
+            } else {
+                boolean nowActive = AaDemoManager.getInstance().toggleDemo();
+                Toast.makeText(this,
+                        nowActive ? R.string.aa_demo_started : R.string.aa_demo_stopped,
+                        Toast.LENGTH_SHORT).show();
+                MenuItem demoItem = mOptionsMenu != null ? mOptionsMenu.findItem(R.id.action_aa_demo) : null;
+                if (demoItem != null) {
+                    demoItem.setTitle(nowActive ? R.string.menu_aa_demo_stop : R.string.menu_aa_demo);
+                }
+            }
         }
 
 

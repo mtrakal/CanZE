@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto screen strings -->
+    <string name="aa_connection_status_title">Connection status</string>
+    <string name="aa_connection_status_disconnected">Not connected to vehicle</string>
+    <string name="aa_connection_instructions_title">Instructions</string>
+    <string name="aa_connection_instructions_text">Open the CanZE app and connect to your vehicle</string>
+
+    <string name="aa_user_soc_title">Battery (User SOC)</string>
+    <string name="aa_real_soc_title">Real state (Real SOC)</string>
+    <string name="aa_range_title">Remaining range</string>
+    <string name="aa_speed_title">Speed</string>
+    <string name="aa_hv_temp_title">HV battery temperature</string>
+    <string name="aa_charging_power_title">Charging power</string>
+    <string name="aa_soh_title">Battery health (SOH)</string>
+
+    <string name="aa_demo_badge" translatable="false">[DEMO]</string>
+    <string name="menu_aa_demo" translatable="false">Demo AA</string>
+    <string name="menu_aa_demo_stop" translatable="false">Stop Demo AA</string>
+    <string name="aa_demo_started" translatable="false">Android Auto demo started</string>
+    <string name="aa_demo_stopped" translatable="false">Android Auto demo stopped</string>
+    <string name="aa_demo_unavailable" translatable="false">Demo is only available when not connected to a device</string>
+
+    <string name="aa_format_percent" translatable="false">%.1f%%</string>
+    <string name="aa_format_km" translatable="false">%.0f km</string>
+    <string name="aa_format_kmh" translatable="false">%.0f km/h</string>
+    <string name="aa_format_celsius" translatable="false">%.1f°C</string>
+    <string name="aa_format_kw" translatable="false">%.1f kW</string>
+</resources>

@@ -14,8 +14,8 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "lu.fisch.canze"
-        minSdkVersion 21
+        applicationId "cz.mtrakal.canze"
+        minSdkVersion 29
         versionName '1.68'
         versionCode 103
     }
@@ -23,7 +23,7 @@ android {
         release {
             //  minifyEnabled false
             //  minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         //debug {
         //    minifyEnabled true
@@ -65,24 +65,29 @@ android {
 
 dependencies {
     // BoM for the Firebase platform
-    playstoreImplementation platform('com.google.firebase:firebase-bom:32.8.0')
+    playstoreImplementation platform('com.google.firebase:firebase-bom:34.10.0')
 
     // Dependencies for the desired Firebase products without specifying versions
-    playstoreImplementation 'com.google.firebase:firebase-analytics:21.6.1'
-    playstoreImplementation 'com.google.firebase:firebase-crashlytics:18.6.3'
+    playstoreImplementation 'com.google.firebase:firebase-analytics:23.0.0'
+    playstoreImplementation 'com.google.firebase:firebase-crashlytics:20.0.4'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'me.drakeet.support:toastcompat:1.1.0'
-    implementation 'com.google.code.gson:gson:2.10.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.preference:preference:1.2.1'
 
-    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.6.3'
-    implementation 'com.google.firebase:firebase-analytics-ktx:21.6.1'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:19.4.4'
+    implementation 'com.google.firebase:firebase-analytics-ktx:22.5.0'
 
     //implementation 'com.firebase:firebase-client-android:2.5.0'
 
     implementation 'com.github.mik3y:usb-serial-for-android:3.9.0'
+
+    // Android Auto dependencies
+    implementation 'androidx.car.app:app:1.7.0'
+    implementation 'androidx.car.app:app-projected:1.7.0'
+    testImplementation 'androidx.car.app:app-testing:1.7.0'
 }

@@ -35,3 +35,4 @@
 -renamesourcefileattribute SourceFile 
 -keepattributes SourceFile,LineNumberTable
 
+-dontoptimize

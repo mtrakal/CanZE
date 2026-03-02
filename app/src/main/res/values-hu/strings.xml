@@ -1,9 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyFractions,TypographyEllipsis">
 
-    <!-- App -->
-
-    <string name="app_name">CanZE</string>
-
     <!-- Menus -->
 
     <string name="action_settings">Beállítások</string>

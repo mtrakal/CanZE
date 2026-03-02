@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CanZE</string>
     <string name="action_settings">Налаштунки</string>
     <string name="build">Збірка:</string>
     <string name="button_AllData">Всі дані</string>

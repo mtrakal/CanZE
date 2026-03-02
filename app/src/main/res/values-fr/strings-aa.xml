@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto screen strings - French -->
+    <string name="aa_connection_status_title">État de la connexion</string>
+    <string name="aa_connection_status_disconnected">Non connecté au véhicule</string>
+    <string name="aa_connection_instructions_title">Instructions</string>
+    <string name="aa_connection_instructions_text">Ouvrez l\'application CanZE et connectez-vous à votre véhicule</string>
+
+    <string name="aa_user_soc_title">Batterie (User SOC)</string>
+    <string name="aa_real_soc_title">État réel (Real SOC)</string>
+    <string name="aa_range_title">Autonomie restante</string>
+    <string name="aa_speed_title">Vitesse</string>
+    <string name="aa_hv_temp_title">Température batterie HV</string>
+    <string name="aa_charging_power_title">Puissance de charge</string>
+    <string name="aa_soh_title">Santé batterie (SOH)</string>
+</resources>
