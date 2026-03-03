@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:keepScreenOn="true"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -13,17 +13,17 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
                     <TextView
@@ -66,14 +66,14 @@
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+                android:layout_height="0dp" android:fitsSystemWindows="true"
                 android:text="@string/default_DoubleSpace"
                 android:layout_weight="1" />
 
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
 
                 <TableRow>
@@ -146,7 +146,7 @@
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow android:layout_marginTop="20dp">
                     <TextView
@@ -219,19 +219,19 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
 
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

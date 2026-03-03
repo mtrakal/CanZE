@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:keepScreenOn="true"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -13,28 +13,28 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TextView
                 android:text="@string/label_driver_torque_request"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
                 <ProgressBar
                     android:id="@+id/pb_driver_torque_request"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:minHeight="25dp"
                     android:max="2048"
                     android:progressDrawable="@drawable/progressbar_canze"
@@ -42,7 +42,7 @@
                 <TextView
                     android:id="@+id/text_driver_torque_request"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:text="@string/default_ZeroNm"
                     android:layout_alignRight="@+id/pb_driver_torque_request"
                     android:layout_alignEnd="@+id/pb_driver_torque_request"
@@ -58,7 +58,7 @@
                 android:id="@+id/MaxBreakTorque"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="9dp"
+                android:layout_height="9dp" android:fitsSystemWindows="true"
                 android:paddingTop="2dp"
                 android:layout_gravity="center_horizontal"
                 android:max="2048"
@@ -69,17 +69,17 @@
             <TextView
                 android:text="@string/label_ElecBrakeWheelsTorqueApplied"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
                 <ProgressBar
                     android:id="@+id/pb_ElecBrakeWheelsTorqueApplied"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:minHeight="25dp"
                     android:max="2048"
                     android:progressDrawable="@drawable/progressbar_canze_green"
@@ -87,7 +87,7 @@
                 <TextView
                     android:id="@+id/text_ElecBrakeWheelsTorqueApplied"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:text="@string/default_ZeroNm"
                     android:layout_alignRight="@+id/pb_ElecBrakeWheelsTorqueApplied"
                     android:layout_alignEnd="@+id/pb_ElecBrakeWheelsTorqueApplied"
@@ -102,17 +102,17 @@
             <TextView
                 android:text="@string/label_diff_friction_torque"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
                 <ProgressBar
                     android:id="@+id/pb_diff_friction_torque"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:minHeight="25dp"
                     android:max="2048"
                     android:progressDrawable="@drawable/progressbar_canze_red"
@@ -120,7 +120,7 @@
                 <TextView
                     android:id="@+id/text_diff_friction_torque"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:text="@string/default_ZeroNm"
                     android:layout_alignRight="@+id/pb_diff_friction_torque"
                     android:layout_alignEnd="@+id/pb_diff_friction_torque"
@@ -136,7 +136,7 @@
                 android:background="?attr/colorButtonNormal"
                 android:text="@string/help_AllTorques"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="40dp"
                 />
 
@@ -148,18 +148,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:keepScreenOn="true"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,24 +12,24 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="0.3"
         android:width="0dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="@string/header_Charging"
                 android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -80,14 +80,14 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/header_Battery"
                 android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -243,18 +243,18 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/header_DrivingCh"
                 android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                     <TextView
                         android:layout_weight="0.7"
@@ -273,23 +273,23 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/header_CompTemp"
                 android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                     <TextView
                         android:id="@+id/text_comp_1_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -297,7 +297,7 @@
                     <TextView
                         android:id="@+id/text_comp_2_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -305,7 +305,7 @@
                     <TextView
                         android:id="@+id/text_comp_3_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -313,7 +313,7 @@
                     <TextView
                         android:id="@+id/text_comp_4_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -321,7 +321,7 @@
                     <TextView
                         android:id="@+id/text_comp_5_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -329,7 +329,7 @@
                     <TextView
                         android:id="@+id/text_comp_6_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -337,7 +337,7 @@
                     <TextView
                         android:id="@+id/text_comp_7_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -345,7 +345,7 @@
                     <TextView
                         android:id="@+id/text_comp_8_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -353,7 +353,7 @@
                     <TextView
                         android:id="@+id/text_comp_9_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -361,7 +361,7 @@
                     <TextView
                         android:id="@+id/text_comp_10_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -369,7 +369,7 @@
                     <TextView
                         android:id="@+id/text_comp_11_temp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_weight="0.3"
                         android:width="0dp"
                         android:text="@string/default_Dash" />
@@ -471,14 +471,14 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/header_GridParameters"
                 android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -718,7 +718,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/header_EVSEParameters"
                 android:textStyle="bold" />
@@ -726,7 +726,7 @@
             <TableLayout
                 android:id="@+id/tableLayoutEVSE"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:visibility="gone">
 
                 <TableRow>
@@ -964,18 +964,18 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/label_debug" />
 
         <TextView
             android:id="@+id/textDebug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/default_debug" />
 
     </LinearLayout>

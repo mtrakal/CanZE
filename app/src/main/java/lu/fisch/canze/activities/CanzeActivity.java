@@ -77,6 +77,7 @@ public abstract class CanzeActivity extends AppCompatActivity implements FieldLi
         }*/
 
         super.onCreate(savedInstanceState);
+        SystemUiCompat.applySafeSystemBars(this);
 
         // save the local theme do it can be used decoding colors for the graphs
         MainActivity.getInstance().setLocalTheme(this.getTheme());

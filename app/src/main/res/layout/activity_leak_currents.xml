@@ -3,7 +3,7 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:keepScreenOn="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -13,20 +13,20 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1"
         >
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 custom:axisMinY="0"
                 custom:axisMaxY="5"
                 custom:majorTicks="1"
@@ -42,14 +42,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="0"
                 custom:axisMaxY="10"
@@ -66,14 +66,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="0"
                 custom:axisMaxY="500"
@@ -90,14 +90,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="0"
                 custom:axisMaxY="200"
@@ -118,18 +118,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

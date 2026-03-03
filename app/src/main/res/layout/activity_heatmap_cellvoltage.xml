@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:keepScreenOn="true"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -13,7 +13,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
         <TableRow>
             <TextView
@@ -58,7 +58,7 @@
 
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:stretchColumns="*"
         android:layout_weight="1"
         >
@@ -70,7 +70,7 @@
             <TextView
                 android:text="@string/_1"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -78,7 +78,7 @@
                 android:textSize="10sp"
                 android:background="#ffc0c0ce"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -87,7 +87,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -96,7 +96,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -105,7 +105,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -114,7 +114,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -123,7 +123,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -132,7 +132,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -141,7 +141,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -153,7 +153,7 @@
             <TextView
                 android:text="@string/_9"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -161,7 +161,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -170,7 +170,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -179,7 +179,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -188,7 +188,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -197,7 +197,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -206,7 +206,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -215,7 +215,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -224,7 +224,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -237,7 +237,7 @@
             <TextView
                 android:text="@string/_17"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -245,7 +245,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -254,7 +254,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -263,7 +263,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -272,7 +272,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -281,7 +281,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -290,7 +290,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -299,7 +299,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -308,7 +308,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -321,7 +321,7 @@
             <TextView
                 android:text="@string/_25"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -329,7 +329,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -338,7 +338,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -347,7 +347,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -356,7 +356,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -365,7 +365,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -374,7 +374,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -383,7 +383,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -392,7 +392,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -405,7 +405,7 @@
             <TextView
                 android:text="@string/_33"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -413,7 +413,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -422,7 +422,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -431,7 +431,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -440,7 +440,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -449,7 +449,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -458,7 +458,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -467,7 +467,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -476,7 +476,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -488,7 +488,7 @@
             <TextView
                 android:text="@string/_41"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -496,7 +496,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -505,7 +505,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -514,7 +514,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -523,7 +523,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -532,7 +532,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -541,7 +541,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -550,7 +550,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -559,7 +559,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -571,7 +571,7 @@
             <TextView
                 android:text="@string/_49"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -579,7 +579,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -588,7 +588,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -597,7 +597,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -606,7 +606,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -615,7 +615,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -624,7 +624,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -633,7 +633,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -642,7 +642,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -655,7 +655,7 @@
             <TextView
                 android:text="@string/_57"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -663,7 +663,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -672,7 +672,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -681,7 +681,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -690,7 +690,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -699,7 +699,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -708,7 +708,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -717,7 +717,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -726,7 +726,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -739,7 +739,7 @@
             <TextView
                 android:text="@string/_65"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -747,7 +747,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -756,7 +756,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -765,7 +765,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -774,7 +774,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -783,7 +783,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -792,7 +792,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -801,7 +801,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -810,7 +810,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -823,7 +823,7 @@
             <TextView
                 android:text="@string/_73"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -831,7 +831,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -840,7 +840,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -849,7 +849,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -858,7 +858,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -867,7 +867,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -876,7 +876,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -885,7 +885,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -894,7 +894,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -906,7 +906,7 @@
             <TextView
                 android:text="@string/_81"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -914,7 +914,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -923,7 +923,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -932,7 +932,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -941,7 +941,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -950,7 +950,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -959,7 +959,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -968,7 +968,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -977,7 +977,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -989,7 +989,7 @@
             <TextView
                 android:text="@string/_89"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 />
             <TextView
@@ -997,7 +997,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1006,7 +1006,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1015,7 +1015,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1024,7 +1024,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1033,7 +1033,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1042,7 +1042,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1051,7 +1051,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1060,7 +1060,7 @@
                 android:textSize="10sp"
                 android:background="?attr/colorButtonNormal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:gravity="center"
                 android:layout_margin="2dp"
                 />
@@ -1072,18 +1072,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

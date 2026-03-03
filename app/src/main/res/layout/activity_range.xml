@@ -3,7 +3,7 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:keepScreenOn="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -15,14 +15,14 @@
     <TextView
         android:text="@string/label_RangeRemaining"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:textSize="24sp"
         />
 
     <TextView
         android:text="@string/default_Dash"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:id="@+id/carRange"
         android:textSize="40sp"
         android:textAlignment="center"
@@ -31,14 +31,14 @@
     <TextView
         android:text="@string/label_RangeRemainingCanZE"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:textSize="24sp"
         />
 
     <TextView
         android:text="@string/default_Dash"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:id="@+id/canzeRange"
         android:textSize="40sp"
         android:textAlignment="center" />
@@ -46,20 +46,20 @@
     <TextView
         android:text="@string/label_EstimatedDrivingStyleLoss"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:textSize="18sp"
         />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:orientation="horizontal"
         >
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:layout_gravity="start"
             android:layout_marginBottom="8dp"
             >
@@ -67,7 +67,7 @@
             <LinearLayout
                 android:id="@+id/bar"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="horizontal"
                 android:weightSum="2" >
 
@@ -75,7 +75,7 @@
                 <SeekBar
                     style="@android:style/Widget.SeekBar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:max="100"
                     android:progress="10"
                     android:id="@+id/seekBar"
@@ -86,7 +86,7 @@
             <TextView
                 android:id="@+id/lossView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="%"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -100,13 +100,13 @@
         <!-- <TextView
             android:text="@string/label_EstimatedDrivingStyleLoss"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:textSize="24sp"
             />
         <TextView
             android:text="@string/default_Dash"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:id="@+id/lossView"
             android:textSize="24sp"
             android:gravity="end"
@@ -117,7 +117,7 @@
     <SeekBar
         style="@android:style/Widget.SeekBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:max="100"
         android:progress="10"
         android:id="@+id/seekBar" /> -->
@@ -125,7 +125,7 @@
     <lu.fisch.canze.widgets.WidgetView
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         custom:axisMinY="0"
         custom:axisMaxY="180,64:320,128:320"
         custom:axisMinYAlt="0"
@@ -153,18 +153,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

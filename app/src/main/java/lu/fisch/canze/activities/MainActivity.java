@@ -644,6 +644,7 @@ public class MainActivity extends AppCompatActivity implements FieldListener /*,
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SystemUiCompat.applySafeSystemBars(this);
 
         // navigation bar
         AppSectionsPagerAdapter appSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());

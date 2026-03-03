@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:keepScreenOn="true"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -13,12 +13,12 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="fill_parent" android:fitsSystemWindows="true"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:layout_gravity="start"
             android:orientation="horizontal">
 
@@ -26,7 +26,7 @@
                 android:id="@+id/link"
                 android:layout_gravity="center_vertical"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:background="?attr/colorBackgroundFloating"
                 android:padding="5dp"
                 android:layout_weight="0.7" />
@@ -34,7 +34,7 @@
             <Button
                 android:id="@+id/csvFirmware"
                 style="?android:attr/button"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_width="0dp"
                 android:layout_marginTop="-6dp"
                 android:layout_marginBottom="-6dp"
@@ -47,102 +47,102 @@
 
         <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
+            android:layout_height="0dp" android:fitsSystemWindows="true"
             android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/lEcu0"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu1"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu2"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu3"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu4"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu5"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu6"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu7"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu8"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu9"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu10"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu11"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu12"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
@@ -150,112 +150,112 @@
                 <TextView
                     android:id="@+id/lEcu13"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu14"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="2" />
 
                 <TextView
                     android:id="@+id/lEcu15"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu16"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu17"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu18"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu19"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu20"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu21"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu22"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu23"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu24"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu25"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu26"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu27"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/lEcu28"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1" />
 
@@ -268,44 +268,44 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textDiagVersion"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:fitsSystemWindows="true" />
 
             <TextView
                 android:id="@+id/textSupplier"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:fitsSystemWindows="true" />
 
             <TextView
                 android:id="@+id/textSoft"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:fitsSystemWindows="true" />
 
             <TextView
                 android:id="@+id/textVersion"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" android:fitsSystemWindows="true" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:text="@string/label_debug" />
 
                 <TextView
                     android:id="@+id/textDebug"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:text="@string/default_debug" />
 
             </LinearLayout>
@@ -318,7 +318,7 @@
         android:id="@+id/progressBar_cyclic3"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:layout_centerInParent="true"
         android:progressDrawable="@drawable/circular_progress_bar"
         android:visibility="gone" />

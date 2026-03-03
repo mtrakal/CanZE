@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:keepScreenOn="true"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -15,13 +15,13 @@
 
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1"
         >
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
@@ -29,7 +29,7 @@
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="0"
                 custom:axisMaxY="64"
@@ -57,7 +57,7 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
@@ -65,7 +65,7 @@
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="0"
                 custom:axisMaxY="40,16:50,64:40,128:40"
@@ -91,7 +91,7 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
@@ -99,7 +99,7 @@
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 custom:axisMinY="0"
@@ -136,18 +136,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

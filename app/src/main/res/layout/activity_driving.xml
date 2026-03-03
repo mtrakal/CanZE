@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:keepScreenOn="true"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,24 +12,24 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="@string/label_pedal" />
 
             <ProgressBar
                 android:id="@+id/pedalBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_gravity="center_horizontal"
                 android:max="125"
                 android:minHeight="25dp"
@@ -39,19 +39,19 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/label_wheel_torque" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -59,7 +59,7 @@
                         android:id="@+id/pb_driver_torque_request"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_gravity="center_horizontal"
                         android:max="1536"
                         android:minHeight="25dp"
@@ -69,7 +69,7 @@
                         android:id="@+id/MaxBrakeTorque"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="9dp"
+                        android:layout_height="9dp" android:fitsSystemWindows="true"
                         android:layout_gravity="center_horizontal"
                         android:max="1536"
                         android:paddingTop="2dp"
@@ -82,7 +82,7 @@
                     android:id="@+id/MeanEffectiveAccTorque"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="2"
                     android:max="2048"
@@ -94,14 +94,14 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textRealSpeed"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:gravity="end"
                     android:text="@string/default_Dash"
                     android:textAppearance="?android:attr/textAppearanceLarge"
@@ -110,7 +110,7 @@
                 <TextView
                     android:id="@+id/textSpeedUnit"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:gravity="start"
                     android:text="@string/unit_SpeedKm"
                     android:textSize="24sp" />
@@ -118,14 +118,14 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textConsumption"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:gravity="end"
                     android:text="@string/default_Dash"
                     android:textAppearance="?android:attr/textAppearanceLarge"
@@ -134,7 +134,7 @@
                 <TextView
                     android:id="@+id/textConsumptionUnit"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:gravity="start"
                     android:text="@string/unit_ConsumptionKm"
                     android:textSize="12sp" />
@@ -143,7 +143,7 @@
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -256,18 +256,18 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/label_debug" />
 
         <TextView
             android:id="@+id/textDebug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/default_debug" />
 
     </LinearLayout>

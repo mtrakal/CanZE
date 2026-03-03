@@ -3,7 +3,7 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:keepScreenOn="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -14,20 +14,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:orientation="vertical"
         android:background="@drawable/border"
         >
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:layout_gravity="start"
             >
             <LinearLayout
                 android:id="@+id/bar_torque"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="8dp"
@@ -38,7 +38,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     >
@@ -47,7 +47,7 @@
                         android:id="@+id/pb_driver_torque_request"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="wrap_content" android:fitsSystemWindows="true"
                         android:layout_gravity="center_horizontal"
                         android:minHeight="25dp"
                         android:max="1536"
@@ -59,7 +59,7 @@
                         android:id="@+id/MaxBreakTorque"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="9dp"
+                        android:layout_height="9dp" android:fitsSystemWindows="true"
                         android:paddingTop="2dp"
                         android:layout_gravity="center_horizontal"
                         android:max="1536"
@@ -71,7 +71,7 @@
                     android:id="@+id/MeanEffectiveAccTorque"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:layout_gravity="center_horizontal"
                     android:minHeight="25dp"
                     android:max="2048"
@@ -83,7 +83,7 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="25dp"
+                android:layout_height="25dp" android:fitsSystemWindows="true"
                 android:text="@string/label_WheelTorque"
                 android:layout_marginLeft="4dp"
                 android:layout_marginStart="4dp"
@@ -98,7 +98,7 @@
             <TextView
                 android:id="@+id/text_wheel_torque"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="@string/unit_Nm"
                 android:layout_marginRight="4dp"
                 android:layout_marginEnd="4dp"
@@ -115,14 +115,14 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:layout_gravity="start"
             >
 
             <LinearLayout
                 android:id="@+id/bar"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:orientation="horizontal"
                 android:layout_marginTop="0dp"
                 android:layout_marginLeft="8dp"
@@ -135,7 +135,7 @@
                     android:id="@+id/pb_instant_consumption_negative"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:minHeight="25dp"
                     android:max="150"
                     android:progress="0"
@@ -147,7 +147,7 @@
                     android:id="@+id/pb_instant_consumption_positive"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="wrap_content" android:fitsSystemWindows="true"
                     android:minHeight="25dp"
                     android:max="150"
                     android:progressDrawable="@drawable/progressbar_canze_accel"
@@ -158,7 +158,7 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="@string/label_InstantConsumption"
                 android:layout_marginLeft="4dp"
                 android:layout_marginStart="4dp"
@@ -173,7 +173,7 @@
             <TextView
                 android:id="@+id/text_instant_consumption_negative"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:text="@string/label_kWh100km"
                 android:layout_marginRight="4dp"
                 android:layout_marginEnd="4dp"
@@ -194,20 +194,20 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1"
         >
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 custom:axisMinY="-30"
                 custom:axisMaxY="70"
@@ -241,14 +241,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 custom:axisMinY="0"
@@ -282,14 +282,14 @@
         <TableRow
             android:id="@+id/tableRowRange"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="fill_parent" android:fitsSystemWindows="true"
             android:orientation="horizontal"
             android:layout_weight="1">
 
             <lu.fisch.canze.widgets.WidgetView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="fill_parent"
+                android:layout_height="fill_parent" android:fitsSystemWindows="true"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="8dp"
                 custom:axisMinY="-12"
@@ -326,18 +326,18 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        >
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"        >
 
         <TextView
             android:text="@string/label_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
         <TextView
             android:id="@+id/textDebug"
             android:text="@string/default_debug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             />
 
     </LinearLayout>

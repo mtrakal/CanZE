@@ -156,6 +156,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.settingsFragment = new SettingsFragment();
         setContentView(R.layout.activity_settings);
+        SystemUiCompat.applySafeSystemBars(this);
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()

@@ -33,6 +33,7 @@ public class SettingsCustomActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_settings_custom);
+        SystemUiCompat.applySafeSystemBars(this);
 
         all = (ListView) findViewById(R.id.lstAll);
         all.setChoiceMode(ListView.CHOICE_MODE_SINGLE);

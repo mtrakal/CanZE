@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent" android:fitsSystemWindows="true"
     android:keepScreenOn="true"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,17 +12,17 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:layout_height="0dp" android:fitsSystemWindows="true"
         android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -113,11 +113,11 @@
             </TableLayout>
 
             <TextView android:layout_weight="1"
-                android:layout_height="20dp"
+                android:layout_height="20dp" android:fitsSystemWindows="true"
                 android:layout_width="0dp" />
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingLeft="10dp"
@@ -128,12 +128,12 @@
                 android:background="?attr/colorButtonNormal"
                 android:text="@string/help_PressuresMbar" />
             <TextView android:layout_weight="1"
-                android:layout_height="20dp"
+                android:layout_height="20dp" android:fitsSystemWindows="true"
                 android:layout_width="0dp" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -225,14 +225,14 @@
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" android:fitsSystemWindows="true"
                 android:layout_weight="1"
                 android:text="@string/default_DoubleSpace" />
 
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -253,7 +253,7 @@
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" android:fitsSystemWindows="true">
 
                 <TableRow>
 
@@ -341,18 +341,18 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:fitsSystemWindows="true"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/label_debug" />
 
         <TextView
             android:id="@+id/textDebug"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content" android:fitsSystemWindows="true"
             android:text="@string/default_debug" />
 
     </LinearLayout>
