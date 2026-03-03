@@ -11,7 +11,7 @@ android {
             keyPassword 'canze4us!'
         }
     }
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "cz.mtrakal.canze"
@@ -41,7 +41,7 @@ android {
     }
     defaultConfig {
 
-        targetSdk 33
+        targetSdk 36
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         buildConfigField "String", "BRANCH", "\"" + "debug" + "\""
         signingConfig signingConfigs.release
@@ -65,29 +65,29 @@ android {
 
 dependencies {
     // BoM for the Firebase platform
-    playstoreImplementation platform('com.google.firebase:firebase-bom:34.10.0')
+    playstoreImplementation libs.firebase.bom
 
     // Dependencies for the desired Firebase products without specifying versions
-    playstoreImplementation 'com.google.firebase:firebase-analytics:23.0.0'
-    playstoreImplementation 'com.google.firebase:firebase-crashlytics:20.0.4'
+    playstoreImplementation libs.firebase.analytics
+    playstoreImplementation libs.firebase.crashlytics
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'me.drakeet.support:toastcompat:1.1.0'
-    implementation 'com.google.code.gson:gson:2.13.2'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'androidx.preference:preference:1.2.1'
+    implementation libs.androidx.legacy.support.v4
+    implementation libs.androidx.appcompat
+    implementation libs.toastcompat
+    implementation libs.gson
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.preference
 
-    implementation 'com.google.firebase:firebase-crashlytics-ktx:19.4.4'
-    implementation 'com.google.firebase:firebase-analytics-ktx:22.5.0'
+    implementation libs.firebase.crashlytics.ktx
+    implementation libs.firebase.analytics.ktx
 
     //implementation 'com.firebase:firebase-client-android:2.5.0'
 
-    implementation 'com.github.mik3y:usb-serial-for-android:3.9.0'
+    implementation libs.usb.serial.for1.android
 
     // Android Auto dependencies
-    implementation 'androidx.car.app:app:1.7.0'
-    implementation 'androidx.car.app:app-projected:1.7.0'
-    testImplementation 'androidx.car.app:app-testing:1.7.0'
+    implementation libs.androidx.app
+    implementation libs.androidx.app.projected
+    testImplementation libs.androidx.app.testing
 }
